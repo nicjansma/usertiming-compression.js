@@ -1,0 +1,58 @@
+{
+    "place": "glassdoor.com",
+    "compressed": {
+        "mark_perceived_load": "1ak",
+        "mark_before_flex_bottom": "1d9",
+        "mark_after_flex_bottom": "1j7",
+        "mark_js_load": "1lr",
+        "mark_before_deferred_js": "1nt",
+        "mark_after_deferred_js": "1om",
+        "mark_site_init": "1rl"
+    },
+    "uri": "~(mark_~(after_~(deferred_js~'1om~flex_bottom~'1j7)~before_~(deferred_js~'1nt~flex_bottom~'1d9)~js_load~'1lr~perceived_load~'1ak~site_init~'1rl))",
+    "zlib": false,
+    "entries": [
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "mark_perceived_load",
+            "startTime": 1675.636999996641
+        },
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "mark_before_flex_bottom",
+            "startTime": 1772.8529999985767
+        },
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "mark_after_flex_bottom",
+            "startTime": 1986.944999996922
+        },
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "mark_js_load",
+            "startTime": 2079.4459999997343
+        },
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "mark_before_deferred_js",
+            "startTime": 2152.8769999968063
+        },
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "mark_after_deferred_js",
+            "startTime": 2181.611999996676
+        },
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "mark_site_init",
+            "startTime": 2289.4089999972493
+        }
+    ]
+}

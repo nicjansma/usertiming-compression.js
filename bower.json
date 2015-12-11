@@ -1,0 +1,29 @@
+{
+  "name": "usertiming-compression",
+  "version": "0.1.0",
+  "homepage": "https://github.com/nicjansma/usertiming-compression.js",
+  "authors": [
+    "Nic Jansma <nic@nicj.net>"
+  ],
+  "description": "UserTiming compression and decompression",
+  "main": "src/usertiming-compression.js",
+  "keywords": [
+    "usertiming",
+    "compress"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "gulpfile.js",
+    "deps",
+    "dist",
+    "node_modules",
+    "bower_components",
+    "test"
+  ],
+  "devDependencies": {
+    "mocha": "~1.21.5",
+    "chai": "~3.4.2",
+    "pako": "~0.2.8"
+  }
+}

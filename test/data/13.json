@@ -1,0 +1,23 @@
+{
+    "place": "guardian.com",
+    "compressed": {
+        "gu.App Begin": "2s9",
+        "gu.App End": "2tl"
+    },
+    "uri": "~(gu.App*20~(Begin~'2s9~End~'2tl))",
+    "msgpack": false,
+    "entries": [
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "gu.App Begin",
+            "startTime": 3609.402999980375
+        },
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "gu.App End",
+            "startTime": 3657.4879999971017
+        }
+    ]
+}

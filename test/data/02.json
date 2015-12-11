@@ -1,0 +1,26 @@
+{
+    "compressed": {
+        "mark1": "2s*3"
+    },
+    "uri": "0mark1~2s*3",
+    "entries": [
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "mark1",
+            "startTime": 100
+        },
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "mark1",
+            "startTime": 200
+        },
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "mark1",
+            "startTime": 300
+        }
+    ]
+}

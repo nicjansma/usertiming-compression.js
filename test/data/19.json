@@ -1,0 +1,28 @@
+{
+    "compressed": {
+        "mark_before_foo": 111,
+        "mark_before_bar": 456,
+        "mark_after_bar": 123
+    },
+    "uri": "~(mark_~(after_bar~123~before_~(bar~456~foo~111)))",
+    "entries": [
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "mark_before_foo",
+            "startTime": 1333
+        },
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "mark_before_bar",
+            "startTime": 5370
+        },
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "mark_after_bar",
+            "startTime": 1371
+        }
+    ]
+}

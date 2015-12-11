@@ -1,0 +1,50 @@
+{
+    "compressed": {
+        "mark1": "2s",
+        "mark2": "5k",
+        "mark3": "8c",
+        "measure1": "2s_2s",
+        "measure2": "5k_5k",
+        "measure3": "8c_8c"
+    },
+    "uri": "~(m~(ark~(1~'2s~2~'5k~3~'8c)~easure~(1~'2s_2s~2~'5k_5k~3~'8c_8c)))",
+    "zlib": false,
+    "entries": [
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "mark1",
+            "startTime": 100
+        },
+        {
+            "duration": 100,
+            "entryType": "measure",
+            "name": "measure1",
+            "startTime": 100
+        },
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "mark2",
+            "startTime": 200
+        },
+        {
+            "duration": 200,
+            "entryType": "measure",
+            "name": "measure2",
+            "startTime": 200
+        },
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "mark3",
+            "startTime": 300
+        },
+        {
+            "duration": 300,
+            "entryType": "measure",
+            "name": "measure3",
+            "startTime": 300
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "compressed": {
+        "mark1": "2s",
+        "mark2": "5k",
+        "mark3": "8c"
+    },
+    "uri": "1-002s~-015k~-zz8c",
+    "map": {
+        "mark1": 36,
+        "mark2": 37,
+        "mark3": 1331
+    },
+    "entries": [
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "mark1",
+            "startTime": 100
+        },
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "mark2",
+            "startTime": 200
+        },
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "mark3",
+            "startTime": 300
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "compressed": {
+        "special\\\"'!|_*.,:{}()~chars": "a"
+    },
+    "uri": "0special%5C%22'!%7C_*.%2C%3A%7B%7D()%257Echars~a",
+    "msgpack": false,
+    "zlib": false,
+    "entries": [
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "special\\\"'!|_*.,:{}()~chars",
+            "startTime": 10
+        }
+    ]
+}

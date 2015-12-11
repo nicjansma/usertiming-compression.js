@@ -1,0 +1,15 @@
+{
+    "place": "msn.com",
+    "compressed": {
+        "TimeToFirstSearchInteractive": "qu"
+    },
+    "uri": "0TimeToFirstSearchInteractive~qu",
+    "entries": [
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "TimeToFirstSearchInteractive",
+            "startTime": 966.0639999783598
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "compressed": {
+        "measure1": "2s_a",
+        "measure11": "5k_k",
+        "measure111": "5k_u",
+        "measure2": "5k_14",
+        "measure3": "8c_1e"
+    },
+    "uri": "~(measure~(1~(*21~'2s_a~1~(*21~'5k_k~1~'5k_u))~2~'5k_14~3~'8c_1e))",
+    "zlib": false,
+    "entries": [
+        {
+            "duration": 10,
+            "entryType": "measure",
+            "name": "measure1",
+            "startTime": 100
+        },
+        {
+            "duration": 20,
+            "entryType": "measure",
+            "name": "measure11",
+            "startTime": 200
+        },
+        {
+            "duration": 30,
+            "entryType": "measure",
+            "name": "measure111",
+            "startTime": 200
+        },
+        {
+            "duration": 40,
+            "entryType": "measure",
+            "name": "measure2",
+            "startTime": 200
+        },
+        {
+            "duration": 50,
+            "entryType": "measure",
+            "name": "measure3",
+            "startTime": 300
+        }
+    ]
+}

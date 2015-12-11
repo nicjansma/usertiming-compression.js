@@ -1,0 +1,56 @@
+{
+    "compressed": {
+        "mark1": "2s*.*3.2s*."
+    },
+    "uri": "0mark1~2s*.*3.2s*.",
+    "entries": [
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "mark1",
+            "startTime": 100
+        },
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "mark1",
+            "startTime": 200
+        },
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "mark1",
+            "startTime": 200
+        },
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "mark1",
+            "startTime": 200
+        },
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "mark1",
+            "startTime": 200
+        },
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "mark1",
+            "startTime": 300
+        },
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "mark1",
+            "startTime": 400
+        },
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "mark1",
+            "startTime": 400
+        }
+    ]
+}

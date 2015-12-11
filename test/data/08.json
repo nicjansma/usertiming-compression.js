@@ -1,0 +1,15 @@
+{
+    "place": "wikipedia.org",
+    "compressed": {
+        "mediaWikiStartUp": "jl"
+    },
+    "uri": "0mediaWikiStartUp~jl",
+    "entries": [
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "mediaWikiStartUp",
+            "startTime": 705.3469999809749
+        }
+    ]
+}

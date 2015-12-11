@@ -1,0 +1,59 @@
+{
+    "place": "microsoftstore.com",
+    "compressed": {
+        "scoutStart": "31t",
+        "scoutEnd": 321,
+        "rr_inline_ratings-call": "325.2.1.*.1"
+    },
+    "uri": "0scoutStart~31t~scoutEnd~321~rr_inline_ratings-call~325.2.1.*.1",
+    "entries": [
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "scoutStart",
+            "startTime": 3952.5699999649078
+        },
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "scoutEnd",
+            "startTime": 3961.2450000131503
+        },
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "rr_inline_ratings-call",
+            "startTime": 3965.3629999957047
+        },
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "rr_inline_ratings-call",
+            "startTime": 3966.9599999906495
+        },
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "rr_inline_ratings-call",
+            "startTime": 3967.6069999695756
+        },
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "rr_inline_ratings-call",
+            "startTime": 3968.068999995012
+        },
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "rr_inline_ratings-call",
+            "startTime": 3968.4049999923445
+        },
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "rr_inline_ratings-call",
+            "startTime": 3968.715999973938
+        }
+    ]
+}

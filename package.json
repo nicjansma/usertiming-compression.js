@@ -1,0 +1,43 @@
+{
+  "name": "usertiming-compression",
+  "description": "UserTiming compression and decompression",
+  "main": "./src/usertiming-compression",
+  "author": "Nic Jansma",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/nicjansma/usertiming-compression.js.git"
+  },
+  "bugs": {
+    "url": "http://github.com/nicjansma/usertiming-compression.js/issues"
+  },
+  "license": "MIT",
+  "scripts": {
+    "test": "gulp travis --verbose"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "cli-table2": "^0.1.9",
+    "colors": "^1.1.2",
+    "gulp": "^3.8.10",
+    "gulp-eslint": "^0.1.8",
+    "gulp-jsoncombine": "^1.0.3",
+    "gulp-rename": "^1.2.0",
+    "gulp-spawn-mocha": "^2.2.1",
+    "gulp-uglify": "^1.0.1",
+    "karma": "^0.12.31",
+    "karma-chai": "*",
+    "karma-chrome-launcher": "^0.1.5",
+    "karma-coverage": "^0.2.6",
+    "karma-firefox-launcher": "^0.1.4",
+    "karma-ie-launcher": "^0.1.5",
+    "karma-mocha": "^0.1.9",
+    "karma-opera-launcher": "^0.1.0",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "karma-safari-launcher": "^0.1.1",
+    "karma-tap-reporter": "0.0.3",
+    "mocha": "^2.0.1",
+    "msgpack5": "^3.3.0",
+    "pako": "^0.2.8"
+  }
+}

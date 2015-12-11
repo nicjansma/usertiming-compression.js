@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>usertiming-compression.js Test Suite</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="vendor/mocha/mocha.css" />
+        <script src="vendor/mocha/mocha.js"></script>
+        <script src="vendor/chai/chai.js"></script>
+        <script src="../src/usertiming-compression.js"></script>
+        <script src="../src/usertiming-decompression.js"></script>
+    </head>
+    <body>
+        <div id="mocha"></div>
+        <script>
+            mocha.setup('bdd');
+        </script>
+        <script src="test-usertiming-compression.js"></script>
+        <script src="test-usertiming-decompression.js"></script>
+        <script src="build/data.js"></script>
+        <script src="lib/msgpack5.min.js"></script>
+        <script src="vendor/pako/dist/pako_deflate.js"></script>
+        <script src="test-usertiming-examples.js"></script>
+        <script>
+            mocha.run();
+        </script>
+  </body>
+</html>

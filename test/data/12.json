@@ -1,0 +1,29 @@
+{
+    "place": "googleadsense.com",
+    "compressed": {
+        "dcp": "c4",
+        "fs": "cz",
+        "ol": "ik"
+    },
+    "uri": "0dcp~c4~fs~cz~ol~ik",
+    "entries": [
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "dcp",
+            "startTime": 435.75399997644126
+        },
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "fs",
+            "startTime": 466.64099994814023
+        },
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "ol",
+            "startTime": 668.4299999615178
+        }
+    ]
+}

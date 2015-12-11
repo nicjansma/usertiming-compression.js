@@ -1,0 +1,10 @@
+.bowerrc
+.eslintrc
+.gitmodules
+.npmignore
+.travis.yml
+gulpfile.js
+bower.json
+dist
+karma.config.js
+test

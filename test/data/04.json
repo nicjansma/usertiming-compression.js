@@ -1,0 +1,28 @@
+{
+    "compressed": {
+        "measure1": "2s_a",
+        "measure2": "5k_k",
+        "measure3": "8c_u"
+    },
+    "uri": "~(measure~(1~'2s_a~2~'5k_k~3~'8c_u))",
+    "entries": [
+        {
+            "duration": 10,
+            "entryType": "measure",
+            "name": "measure1",
+            "startTime": 100
+        },
+        {
+            "duration": 20,
+            "entryType": "measure",
+            "name": "measure2",
+            "startTime": 200
+        },
+        {
+            "duration": 30,
+            "entryType": "measure",
+            "name": "measure3",
+            "startTime": 300
+        }
+    ]
+}
