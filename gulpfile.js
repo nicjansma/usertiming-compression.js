@@ -13,6 +13,7 @@
     var karma = require("karma").server;
     var path = require("path");
     var jsoncombine = require("gulp-jsoncombine");
+    var bower = require("gulp-bower");
 
     //
     // Task Definitions
@@ -65,7 +66,11 @@
             }));
     });
 
-    gulp.task("karma", ["build-test", "mocha", "mocha-tap"], function(done) {
+    gulp.task("bower", function() {
+        return bower();
+    });
+
+    gulp.task("karma", ["bower", "build-test", "mocha", "mocha-tap"], function(done) {
         return karma.start({
             configFile: path.join(__dirname, "karma.config.js"),
             singleRun: true
@@ -74,6 +79,6 @@
 
     gulp.task("all", ["default"]);
     gulp.task("test", ["mocha", "mocha-tap", "karma"]);
-    gulp.task("default", ["lint", "compress", "test"]);
+    gulp.task("default", ["bower", "lint", "compress", "test"]);
     gulp.task("travis", ["default"]);
 }());
