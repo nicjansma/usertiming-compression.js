@@ -201,6 +201,7 @@ Or via ``gulp``:
 ## Version History
 
 * v0.1.0 - 2015-12-10: Initial version
+* v0.1.1 - 2016-04-04: `getCompressedUserTiming()` gathers Measures that end after the specified `from`
 
 ## Thanks
 
