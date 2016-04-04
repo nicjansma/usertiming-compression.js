@@ -202,6 +202,7 @@ Or via ``gulp``:
 
 * v0.1.0 - 2015-12-10: Initial version
 * v0.1.1 - 2016-04-04: `getCompressedUserTiming()` gathers Measures that end after the specified `from`
+* v0.1.2 - 2016-04-04: Protect against X-O frame access that crashes some browsers
 
 ## Thanks
 
