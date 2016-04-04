@@ -375,7 +375,7 @@
         // 'from' minimum time
         if (options.from) {
             entries = entries.filter(function(e) {
-                return e.startTime >= options.from;
+                return e.startTime + e.duration >= options.from;
             });
         }
 
