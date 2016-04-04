@@ -21,7 +21,7 @@
     "colors": "^1.1.2",
     "gulp": "^3.8.10",
     "gulp-bower": "0.0.11",
-    "gulp-eslint": "^0.1.8",
+    "gulp-eslint": "^2.0.0",
     "gulp-jsoncombine": "^1.0.3",
     "gulp-rename": "^1.2.0",
     "gulp-spawn-mocha": "^2.2.1",
