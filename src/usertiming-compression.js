@@ -375,9 +375,11 @@
      * @returns {object} Compressed UserTiming entries
      */
     UserTimingCompression.getCompressedUserTiming = function(options) {
-        var entries = this.findUserTimingForFrame(window);
+        var frame, entries;
 
         options = options || {};
+        frame = options.window || window;
+        entries = this.findUserTimingForFrame(frame);
 
         // 'from' minimum time
         if (options.from) {

@@ -1,6 +1,6 @@
 # usertiming-compression.js
 
-v0.1.0
+v0.1.3
 
 [http://nicj.net](http://nicj.net)
 
@@ -117,6 +117,7 @@ Gathers all UserTiming marks and measures from the root HTML page and all access
 * `options.map`: A map of names to indexes to use for compression.
 * `options.from`: The minimum `startTime`
 * `options.to`: The maximum `startTime`
+* `options.window`: window object that will be queried for UserTiming data
 
 **Returns**: A map of names to compressed values.
 
@@ -203,6 +204,7 @@ Or via ``gulp``:
 * v0.1.0 - 2015-12-10: Initial version
 * v0.1.1 - 2016-04-04: `getCompressedUserTiming()` gathers Measures that end after the specified `from`
 * v0.1.2 - 2016-04-04: Protect against X-O frame access that crashes some browsers
+* v0.1.3 - 2016-07-25: `getCompressedUserTiming()` accepts an alternate window param passed into options
 
 ## Thanks
 
