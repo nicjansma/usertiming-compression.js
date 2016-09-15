@@ -195,8 +195,9 @@
                     var finalValue = time;
 
                     // if this is a measure (with a duration), tack on "_[duration]"
-                    if (typeof value.duration !== "undefined") {
-                        var duration = self.toBase36(value.duration);
+                    if (typeof value.duration === "number") {
+                        // round duration to nearest ms
+                        var duration = self.toBase36(Math.round(value.duration));
 
                         finalValue += "_";
 

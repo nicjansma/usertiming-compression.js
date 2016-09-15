@@ -118,6 +118,15 @@
                 }])).to.deep.equal({"measure1": "1_1"});
             });
 
+            it("should compress a single measure with a rounded duration", function() {
+                expect(utc.compressUserTiming([{
+                    entryType: "measure",
+                    name: "measure1",
+                    startTime: 1,
+                    duration: 0.750
+                }])).to.deep.equal({"measure1": "1_1"});
+            });
+
             it("should compress a single measure with a duration of 0", function() {
                 expect(utc.compressUserTiming([{
                     entryType: "measure",

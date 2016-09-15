@@ -1,6 +1,6 @@
 # usertiming-compression.js
 
-v0.1.3
+v0.1.4
 
 [http://nicj.net](http://nicj.net)
 
@@ -205,6 +205,7 @@ Or via ``gulp``:
 * v0.1.1 - 2016-04-04: `getCompressedUserTiming()` gathers Measures that end after the specified `from`
 * v0.1.2 - 2016-04-04: Protect against X-O frame access that crashes some browsers
 * v0.1.3 - 2016-07-25: `getCompressedUserTiming()` accepts an alternate window param passed into options
+* v0.1.4 - 2016-08-10: Round `duration` values on Measures to nearest millisecond
 
 ## Thanks
 
