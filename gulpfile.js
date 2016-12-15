@@ -10,7 +10,7 @@
     var uglify = require("gulp-uglify");
     var mocha = require("gulp-spawn-mocha");
     var rename = require("gulp-rename");
-    var karma = require("karma").server;
+    var Server = require("karma").Server;
     var path = require("path");
     var jsoncombine = require("gulp-jsoncombine");
     var bower = require("gulp-bower");
@@ -71,10 +71,10 @@
     });
 
     gulp.task("karma", ["bower", "build-test", "mocha", "mocha-tap"], function(done) {
-        return karma.start({
+        new Server({
             configFile: path.join(__dirname, "karma.config.js"),
             singleRun: true
-        }, done);
+        }, done).start();
     });
 
     gulp.task("all", ["default"]);
