@@ -24,6 +24,13 @@
             .pipe(eslint.format());
     });
 
+    gulp.task("lint:build", function() {
+        return gulp.src(["*.js", "src/*.js", "test/*.js"])
+            .pipe(eslint())
+            .pipe(eslint.format())
+            .pipe(eslint.format("checkstyle", fs.createWriteStream("eslint.xml")));
+    });
+
     gulp.task("compress", function() {
         gulp.src("src/*.js")
             .pipe(rename({
@@ -79,6 +86,6 @@
 
     gulp.task("all", ["default"]);
     gulp.task("test", ["mocha", "mocha-tap", "karma"]);
-    gulp.task("default", ["bower", "lint", "compress", "test"]);
+    gulp.task("default", ["bower", "lint", "lint:build", "compress", "test"]);
     gulp.task("travis", ["default"]);
 }());
