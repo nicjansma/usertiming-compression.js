@@ -34,8 +34,8 @@
             // Files from a global TEST_DATA (browser)
             var files = [];
 
-            for (var file in TEST_DATA) {
-                if (TEST_DATA.hasOwnProperty(file)) {
+            for (var file in window.TEST_DATA) {
+                if (window.TEST_DATA.hasOwnProperty(file)) {
                     files.push(file);
                 }
             }
@@ -59,7 +59,7 @@
             var data = fs.readFileSync(path.join(__dirname, "data", name), "utf8");
             return JSON.parse(data);
         } else {
-            return TEST_DATA[name];
+            return window.TEST_DATA[name];
         }
     }
 

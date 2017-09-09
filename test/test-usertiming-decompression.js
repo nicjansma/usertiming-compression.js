@@ -94,7 +94,7 @@
             });
 
             it("should return UserTimings for a simple mark object-JSON", function() {
-                expect(utd.decompressUriTrie({"a": "1"})).to.deep.equal([{
+                expect(utd.decompressUriTrie({ "a": "1" })).to.deep.equal([{
                     name: "a",
                     entryType: "mark",
                     duration: 0,
@@ -417,8 +417,7 @@
             });
 
             it("should return two elements when given an array with a two timings", function() {
-                expect(utd.generateUserTimings("mark", "a*")).to.deep.equal([
-                {
+                expect(utd.generateUserTimings("mark", "a*")).to.deep.equal([{
                     name: "mark",
                     entryType: "mark",
                     duration: 0,
@@ -433,8 +432,7 @@
             });
 
             it("should return three elements when given an array with a three timings", function() {
-                expect(utd.generateUserTimings("mark", "a*3")).to.deep.equal([
-                {
+                expect(utd.generateUserTimings("mark", "a*3")).to.deep.equal([{
                     name: "mark",
                     entryType: "mark",
                     duration: 0,
@@ -455,8 +453,7 @@
             });
 
             it("should return three elements when given an array with a three timings (non-repeating)", function() {
-                expect(utd.generateUserTimings("mark", "a.b.c")).to.deep.equal([
-                {
+                expect(utd.generateUserTimings("mark", "a.b.c")).to.deep.equal([{
                     name: "mark",
                     entryType: "mark",
                     duration: 0,
@@ -477,8 +474,7 @@
             });
 
             it("should return three elements when given an array with a three timings (non-repeating)", function() {
-                expect(utd.generateUserTimings("measure", "a_a.b_b.c_c")).to.deep.equal([
-                {
+                expect(utd.generateUserTimings("measure", "a_a.b_b.c_c")).to.deep.equal([{
                     name: "measure",
                     entryType: "measure",
                     startTime: 10,
@@ -625,8 +621,7 @@
             });
 
             it("should return UserTimings marks and measures for a simple object-JSON", function() {
-                expect(utd.decompressUserTiming("{\"a\": \"1_2.1\"}")).to.deep.equal([
-                {
+                expect(utd.decompressUserTiming("{\"a\": \"1_2.1\"}")).to.deep.equal([{
                     name: "a",
                     startTime: 1,
                     entryType: "measure",

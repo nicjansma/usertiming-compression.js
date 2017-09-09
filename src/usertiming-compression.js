@@ -95,7 +95,9 @@
             // the browser to crash if accessing X-O frame.performance.
             // https://code.google.com/p/chromium/issues/detail?id=585871
             // This variable is not otherwise used.
+            /* eslint-disable no-unused-vars */
             var frameLoc = frame.location && frame.location.href;
+            /* eslint-enable no-unused-vars */
 
             if (!("performance" in frame) ||
                 !frame.performance ||
@@ -265,14 +267,12 @@
                 } else if (typeof node === "string") {
                     // this is a leaf, but we need to go further, so convert it into a branch
                     cur = cur[letter] = { "!": node };
+                } else if (i === (letters.length - 1)) {
+                    // this is the end of our key, and we've hit an existing node.  Add our timings.
+                    cur[letter]["!"] = value;
                 } else {
-                    if (i === (letters.length - 1)) {
-                        // this is the end of our key, and we've hit an existing node.  Add our timings.
-                        cur[letter]["!"] = value;
-                    } else {
-                        // continue onwards
-                        cur = cur[letter];
-                    }
+                    // continue onwards
+                    cur = cur[letter];
                 }
             }
         }

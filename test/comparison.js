@@ -1,9 +1,7 @@
 /* eslint-env node, mocha */
-/* eslint-disable no-unused-expressions */
-(function(root) {
+/* eslint-disable no-unused-expressions, no-console */
+(function() {
     "use strict";
-
-    root = root || {};
 
     //
     // Imports
@@ -19,7 +17,7 @@
     // instantiate
     var table = new Table({
         head: ["Test", "JSON", "UTC", "UTC %", "JSON.gz", "JSON.gz %", "JSON.pack",
-               "JSON.pack %", "TS.gz", "TS.gz %", "TS.pack", "TS.pack %"]
+            "JSON.pack %", "TS.gz", "TS.gz %", "TS.pack", "TS.pack %"]
     });
 
     var files = fs.readdirSync(path.join(__dirname, "data"));
@@ -80,7 +78,7 @@
         }
 
         table.push([files[i], jsonLength, utc, utcPct, jsonGz, jsonGzPct,
-                    jsonPack, jsonPackPct, utcGz, utcGzPct, utcPack, utcPackPct]);
+            jsonPack, jsonPackPct, utcGz, utcGzPct, utcPack, utcPackPct]);
     }
 
     var totalUtcPct = Math.round(totalUtc / totalJson * 100) + "%";
@@ -90,7 +88,7 @@
     var totalUtcPackPct = Math.round(totalUtcPack / totalUtc * 100) + "%";
 
     table.push(["Total", totalJson, totalUtc, totalUtcPct, totalJsonGz, totalJsonGzPct,
-                totalJsonPack, totalJsonPackPct, totalUtcGz, totalUtcGzPct, totalUtcPack, totalUtcPackPct]);
+        totalJsonPack, totalJsonPackPct, totalUtcGz, totalUtcGzPct, totalUtcPack, totalUtcPackPct]);
 
     console.log(table.toString());
 }(typeof window !== "undefined" ? window : undefined));

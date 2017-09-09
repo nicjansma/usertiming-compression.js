@@ -82,7 +82,7 @@
                     entryType: "mark",
                     name: "mark1",
                     startTime: 1
-                }])).to.deep.equal({"mark1": 1});
+                }])).to.deep.equal({ "mark1": 1 });
             });
 
             it("should compress two marks of the same name", function() {
@@ -94,7 +94,7 @@
                     entryType: "mark",
                     name: "mark1",
                     startTime: 3
-                }])).to.deep.equal({"mark1": "1.2"});
+                }])).to.deep.equal({ "mark1": "1.2" });
             });
 
             it("should compress two marks with different names", function() {
@@ -106,7 +106,7 @@
                     entryType: "mark",
                     name: "mark2",
                     startTime: 3
-                }])).to.deep.equal({"mark1": 1, "mark2": 3});
+                }])).to.deep.equal({ "mark1": 1, "mark2": 3 });
             });
 
             it("should compress a single measure", function() {
@@ -115,7 +115,7 @@
                     name: "measure1",
                     startTime: 1,
                     duration: 1
-                }])).to.deep.equal({"measure1": "1_1"});
+                }])).to.deep.equal({ "measure1": "1_1" });
             });
 
             it("should compress a single measure with a rounded duration", function() {
@@ -124,7 +124,7 @@
                     name: "measure1",
                     startTime: 1,
                     duration: 0.750
-                }])).to.deep.equal({"measure1": "1_1"});
+                }])).to.deep.equal({ "measure1": "1_1" });
             });
 
             it("should compress a single measure with a duration of 0", function() {
@@ -133,7 +133,7 @@
                     name: "measure1",
                     startTime: 1,
                     duration: 0
-                }])).to.deep.equal({"measure1": "1_"});
+                }])).to.deep.equal({ "measure1": "1_" });
             });
 
             it("should compress two measures of the same name", function() {
@@ -147,7 +147,7 @@
                     name: "measure1",
                     startTime: 3,
                     duration: 5
-                }])).to.deep.equal({"measure1": "1_1.2_5"});
+                }])).to.deep.equal({ "measure1": "1_1.2_5" });
             });
 
             it("should compress two measures with different names", function() {
@@ -161,7 +161,7 @@
                     name: "measure2",
                     startTime: 3,
                     duration: 5
-                }])).to.deep.equal({"measure1": "1_1", "measure2": "3_5"});
+                }])).to.deep.equal({ "measure1": "1_1", "measure2": "3_5" });
             });
 
             it("should compress a mark and a measure", function() {
@@ -174,7 +174,7 @@
                     name: "measure1",
                     startTime: 3,
                     duration: 5
-                }])).to.deep.equal({"mark1": 1, "measure1": "3_5"});
+                }])).to.deep.equal({ "mark1": 1, "measure1": "3_5" });
             });
         });
 
@@ -183,7 +183,7 @@
         //
         describe(".convertToTrie()", function() {
             it("should convert a single node", function() {
-                var data = {"abc": "abc"};
+                var data = { "abc": "abc" };
                 var expected = {
                     "a": {
                         "b": {
@@ -195,7 +195,7 @@
             });
 
             it("should convert a two-node tree whose nodes don't intersect", function() {
-                var data = {"abc": "abc", "xyz": "xyz"};
+                var data = { "abc": "abc", "xyz": "xyz" };
                 var expected = {
                     "a": {
                         "b": {
@@ -212,7 +212,7 @@
             });
 
             it("should convert a complex tree", function() {
-                var data = {"abc": "abc", "abcd": "abcd", "ab": "ab"};
+                var data = { "abc": "abc", "abcd": "abcd", "ab": "ab" };
                 var expected = {
                     "a": {
                         "b": {
@@ -233,7 +233,7 @@
         //
         describe(".optimizeTrie()", function() {
             it("should optimize a single-node tree", function() {
-                var data = {"abc": "abc"};
+                var data = { "abc": "abc" };
                 var expected = {
                     "abc": "abc"
                 };
@@ -244,7 +244,7 @@
             });
 
             it("should optimize a simple tree", function() {
-                var data = {"abc": "abc", "xyz": "xyz"};
+                var data = { "abc": "abc", "xyz": "xyz" };
                 var expected = {
                     "abc": "abc",
                     "xyz": "xyz"
@@ -256,7 +256,7 @@
             });
 
             it("should optimize a complex tree", function() {
-                var data = {"abc": "abc", "abcd": "abcd", "ab": "ab"};
+                var data = { "abc": "abc", "abcd": "abcd", "ab": "ab" };
                 var expected = {
                     "ab":
                     {
@@ -366,19 +366,19 @@
             });
 
             it("should return a string for a single object", function() {
-                expect(utc.flattenArray({foo: "1"})).to.equal("foo~1");
+                expect(utc.flattenArray({ foo: "1" })).to.equal("foo~1");
             });
 
             it("should return a string for a single object with an integer value", function() {
-                expect(utc.flattenArray({foo: 1})).to.equal("foo~1");
+                expect(utc.flattenArray({ foo: 1 })).to.equal("foo~1");
             });
 
             it("should return a string for a two objects", function() {
-                expect(utc.flattenArray({foo: "1", bar: "2"})).to.equal("foo~1~bar~2");
+                expect(utc.flattenArray({ foo: "1", bar: "2" })).to.equal("foo~1~bar~2");
             });
 
             it("should work with a name with a value of ~", function() {
-                expect(utc.flattenArray({"~": "1"})).to.equal("%7E~1");
+                expect(utc.flattenArray({ "~": "1" })).to.equal("%7E~1");
             });
         });
     });

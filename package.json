@@ -19,6 +19,7 @@
     "chai": "^3.4.1",
     "cli-table2": "^0.2.0",
     "colors": "^1.1.2",
+    "eslint-config-nicjansma": "^1.0.4",
     "gulp": "^3.8.10",
     "gulp-bower": "0.0.13",
     "gulp-eslint": "^3.0.1",

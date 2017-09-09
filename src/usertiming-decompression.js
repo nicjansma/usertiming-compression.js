@@ -153,9 +153,9 @@
 
                 resources = resources.concat(nodeResources);
             }
-      }
+        }
 
-      return resources;
+        return resources;
     };
 
     /**

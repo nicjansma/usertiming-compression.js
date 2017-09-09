@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 var utc = require("../src/usertiming-compression");
 var fs = require("fs");
 var path = require("path");
@@ -7,8 +8,10 @@ var testFiles = fs.readdirSync(path.join(__dirname, "data"));
 for (var i = 0; i < testFiles.length; i++) {
     var file = testFiles[i];
     var data = require(path.join(__dirname, "data", file));
+
     console.log("****** " + file + " ******");
     console.log(data.entries);
+
     var comp = utc.compressUserTiming(data.entries);
     var out = {
         compressed: comp,
