@@ -1,9 +1,8 @@
 {
   "name": "usertiming-compression",
   "description": "UserTiming compression and decompression",
-  "main": "./src/usertiming-compression",
   "author": "Nic Jansma",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "repository": {
     "type": "git",
     "url": "http://github.com/nicjansma/usertiming-compression.js.git"

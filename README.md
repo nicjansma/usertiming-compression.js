@@ -206,6 +206,7 @@ Or via ``gulp``:
 * v0.1.2 - 2016-04-04: Protect against X-O frame access that crashes some browsers
 * v0.1.3 - 2016-07-25: `getCompressedUserTiming()` accepts an alternate window param passed into options
 * v0.1.4 - 2016-08-10: Round `duration` values on Measures to nearest millisecond
+* v0.1.5 - 2017-10-01: Fixed NPM entry point
 
 ## Thanks
 
