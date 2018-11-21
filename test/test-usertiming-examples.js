@@ -72,11 +72,11 @@
 
     var UserTimingCompression = root.UserTimingCompression ?
         root.UserTimingCompression :
-        require("../src/usertiming-compression");
+        require("../dist/usertiming-compression");
 
     var UserTimingDecompression = root.UserTimingDecompression ?
         root.UserTimingDecompression :
-        require("../src/usertiming-decompression");
+        require("../dist/usertiming-decompression");
 
     var chai = root.chai ? root.chai : require("chai");
     var expect = chai.expect;

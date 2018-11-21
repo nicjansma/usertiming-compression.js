@@ -14,30 +14,61 @@
     var path = require("path");
     var jsoncombine = require("gulp-jsoncombine");
     var bower = require("gulp-bower");
+    var replace = require("gulp-replace");
+
+    var sourceFiles = [
+        "*.js",
+        "src/**/*.js",
+        "test/*.js",
+        "cli/*.js"
+    ];
 
     //
     // Task Definitions
     //
     gulp.task("lint", function() {
-        gulp.src(["*.js", "src/*.js", "test/*.js"])
+        gulp.src(sourceFiles)
             .pipe(eslint())
             .pipe(eslint.format());
     });
 
     gulp.task("lint:build", function() {
-        return gulp.src(["*.js", "src/*.js", "test/*.js"])
+        return gulp.src(sourceFiles)
             .pipe(eslint())
             .pipe(eslint.format())
             .pipe(eslint.format("checkstyle", fs.createWriteStream("eslint.xml")));
     });
 
     gulp.task("compress", function() {
-        gulp.src("src/*.js")
+        gulp.src([
+            "!dist/*.min.*",
+            "dist/*.js"
+        ])
             .pipe(rename({
                 suffix: ".min"
             }))
             .pipe(uglify({ mangle: true }))
             .pipe(gulp.dest("dist"));
+    });
+
+    gulp.task("build", function() {
+        [
+            { "file": "usertiming-compression", "name": "UserTimingCompression" },
+            { "file": "usertiming-decompression", "name": "UserTimingDecompression" }
+        ].forEach(function(o) {
+            var vanillaJs = fs.readFileSync("./src/shared/vanilla.js", "utf8").replace(/__name__/g, o.name);
+            var detectJs = fs.readFileSync("./src/shared/detect.js", "utf8").replace(/__name__/g, o.name);
+
+            gulp.src("./src/" + o.file + ".js")
+                .pipe(replace(/[^\n]*__module__;.*/g, detectJs))
+                .pipe(rename(o.file + ".js"))
+                .pipe(gulp.dest("./dist"));
+
+            gulp.src("./src/" + o.file + ".js")
+                .pipe(replace(/[^\n]*__module__;.*/g, vanillaJs))
+                .pipe(rename(o.file + ".vanilla.js"))
+                .pipe(gulp.dest("./dist"));
+        });
     });
 
     gulp.task("build-test", function() {

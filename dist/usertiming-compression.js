@@ -635,5 +635,26 @@
         }
     };
 
-    __module__; // eslint-disable-line no-undef, no-unused-expressions
+    //
+    // Export to the appropriate location
+    //
+    if (typeof define === "function" && define.amd) {
+        //
+        // AMD / RequireJS
+        //
+        define([], function() { // eslint-disable-line strict
+            return UserTimingCompression; // eslint-disable-line no-undef
+        });
+    } else if (typeof module !== "undefined" && module.exports) {
+        //
+        // Node.js
+        //
+        module.exports = UserTimingCompression; // eslint-disable-line no-undef
+    } else if (typeof root !== "undefined") {
+        //
+        // Browser Global
+        //
+        root.UserTimingCompression = UserTimingCompression; // eslint-disable-line no-undef, no-underscore-dangle
+    }
+
 }(typeof window !== "undefined" ? window : undefined));

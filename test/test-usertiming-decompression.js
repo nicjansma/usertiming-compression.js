@@ -11,7 +11,7 @@
 
     var utd = root.UserTimingDecompression ?
         root.UserTimingDecompression :
-        require("../src/usertiming-decompression");
+        require("../dist/usertiming-decompression");
 
     var chai = root.chai ? root.chai : require("chai");
     var expect = chai.expect;

@@ -5,6 +5,10 @@
 .travis.yml
 gulpfile.js
 bower.json
-dist
+eslint.xml
+src
+dist/*.min.js
+dist/*.vanilla.*
 karma.config.js
 test
+*.tgz

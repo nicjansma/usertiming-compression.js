@@ -507,5 +507,11 @@
         }());
     };
 
-    __module__; // eslint-disable-line no-undef, no-unused-expressions
+    if (typeof root !== "undefined") {
+        //
+        // Browser Global
+        //
+        root.UserTimingDecompression = UserTimingDecompression; // eslint-disable-line no-undef, no-underscore-dangle
+    }
+
 }(typeof window !== "undefined" ? window : undefined));

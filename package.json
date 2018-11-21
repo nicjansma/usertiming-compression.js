@@ -2,7 +2,7 @@
   "name": "usertiming-compression",
   "description": "UserTiming compression and decompression",
   "author": "Nic Jansma",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "repository": {
     "type": "git",
     "url": "http://github.com/nicjansma/usertiming-compression.js.git"
@@ -34,6 +34,7 @@
     "karma-tap-reporter": "0.0.6",
     "mocha": "^3.2.0",
     "msgpack5": "^3.3.0",
-    "pako": "^1.0.4"
+    "pako": "^1.0.4",
+    "gulp-replace": "^1.0.0"
   }
 }

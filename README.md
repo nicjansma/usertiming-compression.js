@@ -1,6 +1,6 @@
 # usertiming-compression.js
 
-v0.1.4
+v0.1.6
 
 [http://nicj.net](http://nicj.net)
 
@@ -11,8 +11,11 @@ Licensed under the MIT license
 `usertiming-compression.js` compresses data from [UserTiming](http://www.w3.org/TR/user-timing/).  A
 companion script, `usertiming-decompression.js`, converts the compressed data back to the original form.
 
-[UserTiming](http://www.w3.org/TR/user-timing/) is a [modern browser](http://caniuse.com/#feat=user-timing) performance API that gives developers the ability the mark important events (timestamps) and measure durations (timestamp deltas) in their web apps.  The [PerformanceTimeline](http://www.w3.org/TR/performance-timeline/) has several methods such as
-`performance.getEntriesByType('mark')` or `performance.getEntriesByType('measure')` that return each mark or measure's `startTime` (timestamp) and `duration` (for measures).
+[UserTiming](http://www.w3.org/TR/user-timing/) is a [modern browser](http://caniuse.com/#feat=user-timing) performance
+API that gives developers the ability the mark important events (timestamps) and measure durations (timestamp deltas)
+in their web apps.  The [PerformanceTimeline](http://www.w3.org/TR/performance-timeline/) has several methods such as
+`performance.getEntriesByType('mark')` or `performance.getEntriesByType('measure')` that return each mark or
+measure's `startTime` (timestamp) and `duration` (for measures).
 
 `usertiming-compression.js` applies several data-compression techniques to reduce the size of your serialized
 UserTiming data to 10-15% of it's original size in many cases.  See
@@ -27,15 +30,23 @@ Releases are available for download from [GitHub](https://github.com/nicjansma/u
 
 ### Web - Compression
 
-__Development:__ [usertiming-compression.js](https://github.com/nicjansma/usertiming-compression.js/raw/master/src/usertiming-compression.js) - 19kb
+__Development:__ ([UMD](https://github.com/umdjs/umd)) [usertiming-compression.js](https://github.com/nicjansma/usertiming-compression.js/raw/master/dist/usertiming-compression.js) - 20kb
 
-__Production:__ [usertiming-compression.min.js](https://github.com/nicjansma/usertiming-compression.js/raw/master/dist/usertiming-compression.min.js) - 3.9kb minified, 1.6kb gzipped
+__Development:__ (`window.UserTimingCompression`) [usertiming-compression.vanilla.js](https://github.com/nicjansma/usertiming-compression.js/raw/master/dist/usertiming-compression.vanilla.js) - 20kb
+
+__Production:__ ([UMD](https://github.com/umdjs/umd)) [usertiming-compression.min.js](https://github.com/nicjansma/usertiming-compression.js/raw/master/dist/usertiming-compression.min.js) - 4.0kb minified, 1.6kb gzipped
+
+__Production:__ (`window.UserTimingCompression`) [usertiming-compression.vanilla.min.js](https://github.com/nicjansma/usertiming-compression.js/raw/master/dist/usertiming-compression.vanilla.min.js) - 3.8kb minified, 1.6kb gzipped
 
 ### Web - Decompression
 
-__Development:__ [usertiming-decompression.js](https://github.com/nicjansma/usertiming-compression.js/raw/master/src/usertiming-decompression.js) - 15.9kb
+__Development:__ ([UMD](https://github.com/umdjs/umd)) [usertiming-decompression.js](https://github.com/nicjansma/usertiming-compression.js/raw/master/dist/usertiming-decompression.js) - 16kb
 
-__Production:__ [usertiming-decompression.min.js](https://github.com/nicjansma/usertiming-compression.js/raw/master/dist/usertiming-decompression.min.js) - 3.7kb minified, 1.5kb gzipped
+__Development:__ (`window.UserTimingCompression`) [usertiming-decompression.vanilla.js](https://github.com/nicjansma/usertiming-compression.js/raw/master/dist/usertiming-decompression.vanilla.js) - 15kb
+
+__Production:__ ([UMD](https://github.com/umdjs/umd)) [usertiming-decompression.min.js](https://github.com/nicjansma/usertiming-compression.js/raw/master/dist/usertiming-decompression.min.js) - 3.7kb minified, 1.5kb gzipped
+
+__Production:__ (`window.UserTimingCompression`) [usertiming-decompression.vanilla.min.js](https://github.com/nicjansma/usertiming-compression.js/raw/master/dist/usertiming-decompression.vanilla.min.js) - 3.5kb minified, 1.5kb gzipped
 
 ### NPM
 
@@ -50,6 +61,32 @@ usertiming-compression.js is also available via [bower](http://bower.io/). You c
 
     bower install usertiming-compression
 
+### CLI
+
+Compression and decompression can be done on the command line via:
+
+    node cmd.js
+
+```
+$ node cmd.js --help
+
+  Usage: cmd [options] [command]
+
+
+  Commands:
+
+    decompress <file>  decompress file
+    compress <file>    compress file
+
+  Options:
+
+    -h, --help           output usage information
+    -V, --version        output the version number
+    -o, --output <file>  Output file
+    -p, --pretty         Pretty JSON
+    -v, --verbose        Verbose debugging
+```
+
 ## Usage
 
 Please see the [W3C UserTiming API Reference](http://www.w3.org/TR/user-timing/) for details on how to use the
@@ -60,10 +97,16 @@ UserTiming API.
 To include usertiming-compression.js, include it via a script tag:
 
 ```html
-<script type="text/javascript" src="usertiming-compression.min.js"></script>
+<script type="text/javascript" src="usertiming-compression.vanilla.min.js"></script>
 ```
 
-Once included in the page, a top-level `UserTimingCompression` object is available on `window`.  If AMD or CommonJS environments are detected, it will expose itself via those methods.
+Once included in the page, a top-level `UserTimingCompression` object is available on `window`.
+
+If AMD or CommonJS environments are detected, you can use the UMD version:
+
+```html
+<script type="text/javascript" src="usertiming-compression.min.js"></script>
+```
 
 From the NPM module:
 
@@ -82,7 +125,8 @@ var utMap = UserTimingCompression.getCompressedUserTiming(options);
 // }
 ```
 
-If you have a [map](http://nicj.net/compressing-usertiming/) of mark / measure names you want to use, pass them in as `options.map`:
+If you have a [map](http://nicj.net/compressing-usertiming/) of mark / measure names you want to use, pass them in
+as `options.map`:
 
 ```js
 var utMap = UserTimingCompression.getCompressedUserTiming({
@@ -99,7 +143,8 @@ var utMap = UserTimingCompression.getCompressedUserTiming({
 // }
 ```
 
-If you want to further compress this list for a format suitable for URL transmission (e.g. on a query string), you can use `compressForUri()`:
+If you want to further compress this list for a format suitable for URL transmission (e.g. on a query string), you
+can use `compressForUri()`:
 
 ```js
 var utData = UserTimingCompression.compressForUri(utMap);
@@ -142,7 +187,8 @@ Takes the output of `getCompressedUserTiming()` and converts it into a string su
 "~(m~(ark~(1~'2s~2~'5k~3~'8c)))"
 ```
 
-**Note**: The first character of the string denotes what type of [compression](http://nicj.net/compressing-usertiming/) is used:
+**Note**: The first character of the string denotes what type of [compression](http://nicj.net/compressing-usertiming/)
+is used:
 
 1. `~` is optimized Trie (JSURL) compression
 2. `0` is a tilde array
@@ -153,10 +199,16 @@ Takes the output of `getCompressedUserTiming()` and converts it into a string su
 To include usertiming-decompression.js, include it via a script tag:
 
 ```html
-<script type="text/javascript" src="usertiming-decompression.min.js"></script>
+<script type="text/javascript" src="usertiming-decompression.vanilla.min.js"></script>
 ```
 
-Once included in the page, a top-level `UserTimingDecompression` object is available on `window`.  If AMD or CommonJS environments are detected, it will expose itself via those methods.
+Once included in the page, a top-level `UserTimingDecompression` object is available on `window`.
+
+If AMD or CommonJS environments are detected, you can use the UMD version:
+
+```html
+<script type="text/javascript" src="usertiming-decompression.min.js"></script>
+```
 
 From the NPM module:
 
@@ -207,7 +259,10 @@ Or via ``gulp``:
 * v0.1.3 - 2016-07-25: `getCompressedUserTiming()` accepts an alternate window param passed into options
 * v0.1.4 - 2016-08-10: Round `duration` values on Measures to nearest millisecond
 * v0.1.5 - 2017-10-01: Fixed NPM entry point
+* v0.1.6 - 2018-11-21: Changed build process to produce UMD (for Node/require) and "Vanilla" (for Browser) files in `dist/`
 
 ## Thanks
 
-Parts of [JSURL](https://github.com/Sage/jsurl) were incorporated into this library.  This project builds upon the work of [ResourceTiming Compression](https://github.com/nicjansma/resourcetiming-compression.js), with guidance from [Philip Tellis](http://bluesmoon.info/) and others at [SOASTA](http://www.soasta.com).
+Parts of [JSURL](https://github.com/Sage/jsurl) were incorporated into this library.  This project builds upon the
+work of [ResourceTiming Compression](https://github.com/nicjansma/resourcetiming-compression.js), with
+guidance from [Philip Tellis](http://bluesmoon.info/) and others at [SOASTA](http://www.soasta.com).

@@ -7,3 +7,5 @@ npm-debug.log
 /test/coverage
 /test/vendor
 /test/build/data.js
+usertiming-compression-*.tgz
+package-lock.json

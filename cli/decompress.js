@@ -1,10 +1,11 @@
+/* eslint-disable no-console */
 (function() {
     "use strict";
 
     //
     // Imports
     //
-    var UserTimingDecompression = require("../src/usertiming-decompression");
+    var UserTimingDecompression = require("../dist/usertiming-decompression");
     var fs = require("fs");
 
     //

@@ -12,7 +12,7 @@
 
     var utc = root.UserTimingCompression ?
         root.UserTimingCompression :
-        require("../src/usertiming-compression");
+        require("../dist/usertiming-compression");
 
     var chai = root.chai ? root.chai : require("chai");
     var expect = chai.expect;

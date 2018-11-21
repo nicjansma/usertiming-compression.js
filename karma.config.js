@@ -16,7 +16,8 @@ module.exports = function(config) {
         browsers: ["PhantomJS"],
 
         files: [
-            "src/*.js",
+            "dist/usertiming-compression.js",
+            "dist/usertiming-decompression.js",
             "test/lib/*.js",
             "test/vendor/pako/dist/pako_deflate.js",
             "test/build/*.js",

@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-var utc = require("../src/usertiming-compression");
+var utc = require("../dist/usertiming-compression");
 var fs = require("fs");
 var path = require("path");
 

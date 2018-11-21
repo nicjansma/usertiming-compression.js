@@ -3,8 +3,8 @@
 // UserTimingCompression and UserTimingDecompression objects
 //
 var exports = {
-    UserTimingCompression: require("./src/usertiming-compression"),
-    UserTimingDecompression: require("./src/usertiming-decompression")
+    UserTimingCompression: require("./dist/usertiming-compression"),
+    UserTimingDecompression: require("./dist/usertiming-decompression")
 };
 
 module.exports = exports;
