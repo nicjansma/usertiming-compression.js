@@ -1,6 +1,6 @@
 # usertiming-compression.js
 
-v0.1.6
+v0.1.7
 
 [http://nicj.net](http://nicj.net)
 
@@ -260,6 +260,7 @@ Or via ``gulp``:
 * v0.1.4 - 2016-08-10: Round `duration` values on Measures to nearest millisecond
 * v0.1.5 - 2017-10-01: Fixed NPM entry point
 * v0.1.6 - 2018-11-21: Changed build process to produce UMD (for Node/require) and "Vanilla" (for Browser) files in `dist/`
+* v0.1.7 - 2018-11-21: Ensure `dist/` is published in bower
 
 ## Thanks
 

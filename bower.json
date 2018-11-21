@@ -1,6 +1,6 @@
 {
   "name": "usertiming-compression",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "homepage": "https://github.com/nicjansma/usertiming-compression.js",
   "authors": [
     "Nic Jansma <nic@nicj.net>"
@@ -16,10 +16,10 @@
     "**/.*",
     "gulpfile.js",
     "deps",
-    "dist",
     "node_modules",
     "bower_components",
-    "test"
+    "test",
+    "src"
   ],
   "devDependencies": {
     "mocha": "~1.21.5",
