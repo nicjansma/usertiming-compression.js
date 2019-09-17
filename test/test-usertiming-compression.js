@@ -176,6 +176,18 @@
                     duration: 5
                 }])).to.deep.equal({ "mark1": 1, "measure1": "3_5" });
             });
+
+            it("should compress mark and should have integer values", function() {
+                expect(utc.compressUserTiming([{
+                    entryType: "mark",
+                    name: "abc",
+                    startTime: 189
+                }, {
+                    entryType: "measure",
+                    name: "abcd",
+                    startTime: 1300
+                }])).to.deep.equal({ "abc": 59, "abcd": 104 });
+            });
         });
 
         //
@@ -226,6 +238,21 @@
                 };
                 expect(utc.convertToTrie(data)).to.eql(expected);
             });
+
+            it("should be able to convert to a trie when value is an integer", function() {
+                var data = { "abc": 59, "abcd": 104 };
+                var expected = {
+                    "a": {
+                        "b": {
+                            "c": {
+                                "!": 59,
+                                "d": 104
+                            }
+                        }
+                    }
+                };
+                expect(utc.convertToTrie(data)).to.eql(expected);
+            });
         });
 
         //
@@ -270,6 +297,27 @@
 
                 var trie = utc.convertToTrie(data);
 
+                expect(utc.optimizeTrie(trie, true)).to.eql(expected);
+            });
+
+            it("should optimize a tree with integer values", function() {
+                var trie = {
+                    "a": {
+                        "b": {
+                            "c": {
+                                "!": 59,
+                                "d": 104
+                            }
+                        }
+                    }
+                };
+                var expected = {
+                    "abc":
+                    {
+                        "!": 59,
+                        "d": 104
+                    }
+                };
                 expect(utc.optimizeTrie(trie, true)).to.eql(expected);
             });
         });

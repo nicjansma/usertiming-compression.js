@@ -264,7 +264,7 @@
                     // nothing exists yet, create either a leaf if this is the end of the word,
                     // or a branch if there are letters to go
                     cur = cur[letter] = (i === (letters.length - 1) ? value : {});
-                } else if (typeof node === "string") {
+                } else if (typeof node === "string" || typeof node === "number") {
                     // this is a leaf, but we need to go further, so convert it into a branch
                     cur = cur[letter] = { "!": node };
                 } else if (i === (letters.length - 1)) {

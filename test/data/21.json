@@ -1,0 +1,44 @@
+{
+    "compressed": {
+        "mark1": 59,
+        "mark12": 104,
+        "mark_after_bar": 123,
+        "mark_before_bar": 456,
+        "mark_before_foo": 111
+    },
+    "uri": "~(mark~(1~(*21~59~2~104)~_~(after_bar~123~before_~(bar~456~foo~111))))",
+    "zlib": false,
+    "msgpack": false,
+    "entries": [
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "mark1",
+            "startTime": 189
+        },
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "mark12",
+            "startTime": 1300
+        },
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "mark_before_foo",
+            "startTime": 1333
+        },
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "mark_before_bar",
+            "startTime": 5370
+        },
+        {
+            "duration": 0,
+            "entryType": "mark",
+            "name": "mark_after_bar",
+            "startTime": 1371
+        }
+    ]
+}
