@@ -1,6 +1,6 @@
 # usertiming-compression.js
 
-v0.1.8
+v0.1.9
 
 [http://nicj.net](http://nicj.net)
 
@@ -262,6 +262,7 @@ Or via ``gulp``:
 * v0.1.6 - 2018-11-21: Changed build process to produce UMD (for Node/require) and "Vanilla" (for Browser) files in `dist/`
 * v0.1.7 - 2018-11-21: Ensure `dist/` is published in bower
 * v0.1.8 - 2018-11-21: Also include `*.vanilla.js` in NPM
+* v0.1.9 - 2019-09-17: Fix: Compression on Trie nodes that are prefixes of another
 
 ## Thanks
 
